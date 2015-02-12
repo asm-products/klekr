@@ -1,0 +1,21 @@
+#bottom-banner.fullscreen-hidden
+
+  = link_to "About",  root_path(anchor: 'about', show_detail: true)
+  |
+  %a{href: "mailto:info@klekr.com"} Contact
+  |
+  = link_to "FAQ",  root_path(anchor: "faq", show_detail: true)
+  |
+  - if @bottom_links.present?
+    - for link_name in @bottom_links
+      = render_bottom_link link_name
+      |
+  %a#keyShortcutsLink{href: '#'}
+    Key Shortcuts
+
+  .copyrights
+    = render partial: 'general/copyright'
+
+  #debugInfo.inline
+
+= render partial: 'slideshow/key_shortcuts'

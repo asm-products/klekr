@@ -1,0 +1,32 @@
+#import-by-user.modal-popup
+  .fright
+    %a.close-btn{href: "#"} ×
+  #search-user-form
+    %h4
+      Search by user id, username or Email
+    #search-input
+      %input#keyword{type: :text}
+      %a#submit.btn.primary{href: '#'}
+        Search!
+  #searching-user.hidden
+    %h4
+      Finding User On Flickr
+      = image_tag '/assets/loading.gif'
+  #not-found.hidden
+    %h4
+      User not found.
+  #search-result.well.hidden
+    %h4
+      Flickr User Found
+    .row
+      = render partial: 'streams_grid'
+      .clearfix
+    #adding-user.hidden
+      %h4
+        Adding
+        = image_tag '/assets/loading.gif'
+    .center
+      %a#do-add.btn.primary{href: '#'}
+        Add Both
+      #add-individually-note
+        Or, hover mouse on icons to add individually.

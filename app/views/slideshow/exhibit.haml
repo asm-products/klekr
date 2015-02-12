@@ -1,0 +1,24 @@
+:javascript
+  __gridMode__ = true;
+  klekr.Global.filtersOpts = { ratingFilter: true, favedAtFilter: false}
+  klekr.Global.anonymous = true
+  klekr.Global.canAutoPlay = true
+
+- if @default_filters
+  :javascript
+    klekr.Global.defaultFilters = #{@default_filters}
+
+- content_for(:top_left) do
+  .fleft
+    = icon(@icon)
+  .fleft
+    %h3#exhibit-name
+      = @exhibit_name
+  .fleft
+    = auto_discovery_link_tag(:rss, @exhibit_params.merge(format: :rss))
+  .fleft
+    = render partial: '/general/add_this', locals: {title:  'klekr - ' + @exhibit_name}
+- content_for(:top_right) do
+  =render partial: 'slideshow/start_klekr_link'
+= render partial: 'slideshow/slideshow'
+= render partial: 'slideshow/slide_options'

@@ -1,0 +1,76 @@
+- content_for(:head) do
+  = javascript_include_tag 'authentication.js'
+  = stylesheet_link_tag 'authentication'
+:javascript
+  __authUrl__ = '#{@auth_url}';
+  klekr.Global.redirectedToLogin = #{@redirected_to_login};
+
+.container.login
+
+  #top-banner
+    .fleft
+      %h1.site-title
+        Welcome to
+        %span.site-name klekr!
+      %span.beta-tag
+        BETA
+
+      .site-subtitle.animated.fadeInRight
+        %a.help-title{herf: '#'}
+          Discover Photos, Develop Taste.
+    .fright
+      #editor-choice-link
+        %a{href: editors_choice_path} Editors' Choice Photos
+    .clearfix
+  - if @current_collector.blank?
+    - unless @redirected_to_login
+      %h3#login-link.inline
+        = image_tag('flickr.png', id: 'flickr-icon')
+        %a.login-auth-link.has-popover{'data-content' => 'klekr needs your "write" permission from flickr so that you can fave pictures directly here. klekr does not change any of your photos/settings in any other ways.', title: 'Please note', 'data-popover' => 'above', href: @auth_url}
+          Sign in with flickr.com
+      %span#not-sure-guide
+        %span.not-sure
+          Not sure?
+        Check out
+        %a{href: editors_choice_path}
+          editors' choice photos
+        first.
+    #countDownRedirect.hidden
+      %h3
+        Redirecting to flickr.com
+        to
+        = link_to 'login', @auth_url, class: 'login-auth-link hasTwipsy', title: "click here to login."
+        in
+        %span#countdown
+          5
+        secs...
+    #redirect-link.hidden
+      %h3
+        Auto redirection stopped.
+        = link_to 'Click here to login', @auth_url, class: 'login-auth-link'
+    #remember-me-checkbox
+      %input#remember-me{type: 'checkbox'}
+      %label{for: 'remember-me'} remember me on this computer
+    .flickr-login-notes
+      %span *
+      As your personalized picture browser,
+      %span.site-name klekr
+      links with your flickr account so that you don't have to create yet another account.
+
+  - else
+    %h3
+      = link_to "<< Back to My Stream", slideshow_path
+  #welcome-message.well
+    %a
+    %h2.uppercase#want-more-link
+      %a#stop-countdown.help-title{href: '#'}
+        Want to know more about&nbsp;
+        %span.site-name> klekr
+        ?
+    = render partial: 'more_about'
+    = render partial: 'faq'
+
+    .clearfix
+
+  .tweet
+

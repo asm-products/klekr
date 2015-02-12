@@ -1,0 +1,49 @@
+- content_for(:head) do
+  = javascript_include_tag 'slideshow.js'
+  = stylesheet_link_tag 'slideshow'
+
+  :javascript
+    __morePicturesPath__ = '#{@more_pictures_path}';
+    __advance_by_progress__ = '#{@advance_by_progress}';
+    klekr.Global.defaultGalleryCacheSize = #{Settings.gallery_cache_size}
+
+= render partial: 'slideshow/gridview'
+
+#empty-gallery-message.container.hidden
+  .well
+    - if @empty_message_partial.present?
+      = render partial: 'slideshow/' + @empty_message_partial
+    - else
+      %h2
+        = @empty_message
+
+#slide{style: 'width:90%; text-align: center;'}
+  #pictureArea
+    #imageFrameOuter{style: 'display: table; width: 100%'}
+      #imageFrameInner{style: 'display: table-cell; vertical-align: middle;'}
+        %img#picture.pointer{style: 'vertical-align: middle;', src: '/assets/loading.gif'}
+
+#left.side-nav.left
+  %h2.arrow#leftArrow{style: 'text-align:left; padding-left: 10px;'}
+    <
+#right.side-nav.right
+  %h2.arrow#rightArrow{style: 'text-align:right; padding-right: 10px;'}
+    >
+
+  = link_to 'Next', '#', id: 'next', style: 'display: none'
+#preload{style: 'display: none'}
+
+#bottom-part
+  = render partial: 'slideshow/bottom_banner'
+
+  #bottomLeft.bottom
+    .fleft.fullscreen-hidden
+      = render partial: 'slideshow/mode_switch'
+    .fleft
+      = render partial: 'slideshow/full_screen_button'
+    .fleft
+      = render partial: 'slideshow/auto_play'
+    .fleft
+      = render partial: 'slideshow/fave_panel'
+
+  = render partial: 'slideshow/picture_label'

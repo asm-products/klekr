@@ -1,0 +1,17 @@
+Gemfile.lock
+chromedriver.log
+.bundle
+db/*.sqlite3
+log/*
+tmp/**/*
+tmp/*.jpg
+.idea/*
+config/flickr.yml
+config/smtp.yml
+.DS_Store
+db/development.sqlite3-journal
+db/bkp
+.sass-cache
+compiled
+.rspec
+db/schema.rb

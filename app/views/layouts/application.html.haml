@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+%html
+  %head
+    %title
+      klekr - discover art photography
+    = stylesheet_link_tag 'application'
+    = javascript_include_tag 'application'
+    - if @current_collector
+      :javascript
+        klekr.Global.currentCollector = {id: #{@current_collector.id}, name: '#{@current_collector.user_name}', flickrId: '#{@current_collector.user_id}' };
+    %meta{name: "viewport", content: "width=device-width, height=device-height, maximum-scale=1.4, initial-scale=1.0, user-scalable=yes"}
+    = yield(:head)
+    = csrf_meta_tag
+    = render partial: '/general/analytics'
+  %body
+    #top-banner.fullscreen-hidden
+      #top-banner-left.section
+        .fleft
+          = yield(:top_left)
+        #top-banner-middle.fleft
+          = yield(:top_middle)
+      .section
+        #top-banner-right.fright
+          %h4.inline
+            - if @current_collector && !@disable_navigation
+              = render_navigation_links
+        #top-banner-welcome.fright
+          - if @current_collector && !@disable_navigation
+            = render partial: '/general/user_info'
+        .fright
+          = yield(:top_right)
+
+    = yield
+

@@ -1,0 +1,14 @@
+.sources-grid
+  .hidden
+    .source-cell.cell
+      .top-bar.fade-transition.invisible
+        %a#remove.button{:title => "You already has this source. Click to remove it.", href: '#'} ×
+        %a#add.button.hidden{:title => "Click to add", href: '#'} +
+      .main-part
+        .source-icon-placeholder
+          %a.source-icon-link{target: '_blank'}
+            %img.source-icon.shadow
+        %a.source-icon-link{target: '_blank'}
+          .source-name.text-shadow
+        %a.source-icon-link{target: '_blank'}
+          .source-type.text-shadow

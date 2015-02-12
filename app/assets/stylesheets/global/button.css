@@ -1,0 +1,127 @@
+.btn {
+  cursor: pointer;
+  display: inline-block;
+  background-color: #767676;
+  background-repeat: no-repeat;
+  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#999999), color-stop(0.25, #999999), to(#767676));
+  background-image: -webkit-linear-gradient(#999999, #999999 0.25, #767676);
+  background-image: -moz-linear-gradient(#999999, #999999 0.25, #767676);
+  background-image: -ms-linear-gradient(#999999, #999999 0.25, #767676);
+  background-image: -o-linear-gradient(#999999, #999999 0.25, #767676);
+  background-image: linear-gradient(#999999, #999999 0.25, #767676);
+  padding: 4px 14px;
+  text-shadow: 0 1px 1px rgba(255, 255, 255, 0.75);
+  color: #222;
+  font-size: 13px;
+  line-height: 18px;
+  font-weight: bold;
+  border: 1px solid #777;
+  border-bottom-color: #888;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  border-radius: 4px;
+  -webkit-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2), 0 1px 2px rgba(0, 0, 0, 0.05);
+  -moz-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2), 0 1px 2px rgba(0, 0, 0, 0.05);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2), 0 1px 2px rgba(0, 0, 0, 0.05);
+  -webkit-transition: 0.1s linear all;
+  -moz-transition: 0.1s linear all;
+  transition: 0.1s linear all;
+}
+.btn:hover {
+  background-position: 0 -15px;
+  color: #000;
+  text-decoration: none;
+}
+.btn.primary, .btn.danger {
+  color: #DDD;
+}
+.btn.primary:hover, .btn.danger:hover {
+  color: #EEE;
+}
+.btn.primary {
+  background-color: #9A4E3F;
+  background-repeat: repeat-x;
+  background-image: -khtml-gradient(linear, left top, left bottom, from(#CA7E5F), to(#9A4E3F));
+  background-image: -moz-linear-gradient(#CA7E5F, #9A4E3F);
+  background-image: -ms-linear-gradient(#CA7E5F, #9A4E3F);
+  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #CA7E5F), color-stop(100%, #9A4E3F));
+  background-image: -webkit-linear-gradient(#CA7E5F, #9A4E3F);
+  background-image: -o-linear-gradient(#CA7E5F, #9A4E3F);
+  background-image: linear-gradient(#CA7E5F, #9A4E3F);
+  text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
+  border-color: #9A4E3F #9A4E3F #DA8E7F;
+  border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25);
+}
+.btn.danger {
+  background-color: #9d261d;
+  background-repeat: repeat-x;
+  background-image: -khtml-gradient(linear, left top, left bottom, from(#d83a2e), to(#9d261d));
+  background-image: -moz-linear-gradient(#d83a2e, #9d261d);
+  background-image: -ms-linear-gradient(#d83a2e, #9d261d);
+  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #d83a2e), color-stop(100%, #9d261d));
+  background-image: -webkit-linear-gradient(#d83a2e, #9d261d);
+  background-image: -o-linear-gradient(#d83a2e, #9d261d);
+  background-image: linear-gradient(#d83a2e, #9d261d);
+  text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
+  border-color: #9d261d #9d261d #5c1611;
+  border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25);
+}
+.btn.large {
+  font-size: 16px;
+  line-height: 24px;
+  -webkit-border-radius: 6px;
+  -moz-border-radius: 6px;
+  border-radius: 6px;
+}
+.btn.small {
+  padding-right: 9px;
+  padding-left: 9px;
+  font-size: 11px;
+}
+.btn.disabled {
+  background-image: none;
+  filter: alpha(opacity=65);
+  -khtml-opacity: 0.65;
+  -moz-opacity: 0.65;
+  opacity: 0.65;
+  cursor: default;
+}
+.btn:disabled {
+  background-image: none;
+  filter: alpha(opacity=65);
+  -khtml-opacity: 0.65;
+  -moz-opacity: 0.65;
+  opacity: 0.65;
+  cursor: default;
+}
+.btn:active {
+  -webkit-box-shadow: inset 0 3px 7px rgba(0, 0, 0, 0.1), 0 1px 2px rgba(0, 0, 0, 0.05);
+  -moz-box-shadow: inset 0 3px 7px rgba(0, 0, 0, 0.1), 0 1px 2px rgba(0, 0, 0, 0.05);
+  box-shadow: inset 0 3px 7px rgba(0, 0, 0, 0.1), 0 1px 2px rgba(0, 0, 0, 0.05);
+}
+button.btn::-moz-focus-inner, input[type=submit].btn::-moz-focus-inner {
+  padding: 0;
+  border: 0;
+}
+
+
+.close-btn {
+  float: right;
+  color: #000000;
+  font-size: 20px;
+  font-weight: bold;
+  line-height: 13.5px;
+  text-shadow: 0 1px 0 #999999;
+  filter: alpha(opacity=50);
+  -khtml-opacity: 0.5;
+  -moz-opacity: 0.5;
+  opacity: 0.5;
+}
+.close-btn:hover {
+  color: #000000;
+  text-decoration: none;
+  filter: alpha(opacity=80);
+  -khtml-opacity: 0.8;
+  -moz-opacity: 0.8;
+  opacity: 0.8;
+}

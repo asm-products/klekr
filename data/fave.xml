@@ -1,0 +1,12 @@
+      <outline text="*Kit*'s favorites" title="*Kit*'s favorites"
+            type="rss"
+            xmlUrl="http://api.flickr.com/services/feeds/photos_faves.gne?nsid=70022441@N00&amp;lang=en-us&amp;format=rss_200" htmlUrl="http://www.flickr.com/photos/_kit/favorites/"/>
+        <outline text="*Rui's favorites" title="*Rui's favorites"
+            type="rss"
+            xmlUrl="http://api.flickr.com/services/feeds/photos_faves.gne?nsid=92302966@N00&amp;lang=en-us&amp;format=rss_200" htmlUrl="http://www.flickr.com/photos/rui_from-japan/favorites/"/>
+        <outline text="+lyn's favorites" title="+lyn's favorites"
+            type="rss"
+            xmlUrl="http://api.flickr.com/services/feeds/photos_faves.gne?nsid=87231758@N00&amp;lang=en-us&amp;format=rss_200" htmlUrl="http://www.flickr.com/photos/lynhana/favorites/"/>
+        <outline text="73。's favorites" title="73。's favorites"
+            type="rss"
+            xmlUrl="http://api.flickr.com/services/feeds/photos_faves.gne?nsid=22734025@N06&amp;lang=en-us&amp;format=rss_200" htmlUrl="http://www.flickr.com/photos/73_flickr/favorites/"/>

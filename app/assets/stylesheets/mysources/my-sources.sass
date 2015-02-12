@@ -1,0 +1,153 @@
+@import '../global/_mixins'
+
+#loading-sources-indicator
+  margin-left: 81px
+
+.sources-grid
+  margin-top: 10px
+  .removed
+    opacity: 0.5
+
+  .source-cell
+    text-align: center
+    margin-left: 14px
+    padding-bottom: 5px
+    width: 111px
+    height: 110px
+    .top-bar
+      text-align: right
+      padding-right: 10px
+      line-height: 13.5px
+      height: 16px
+      width: 111px
+      a.button
+        color: #000000
+        font-size: 20px
+        line-height: 13.5px
+        font-weight: bold
+        text-shadow: 0 1px 0 #999999
+        filter: alpha(opacity=90)
+        -khtml-opacity: 0.7
+        -moz-opacity: 0.7
+        opacity: 0.7
+
+      a.button:hover
+        color: #000000
+        text-decoration: none
+        filter: alpha(opacity=90)
+        -khtml-opacity: 0.9
+        -moz-opacity: 0.9
+        opacity: 0.9
+
+    .source-name
+      color: #7f7f7f
+    .source-type
+      color: #606060
+    .source-icon-placeholder
+      margin-bottom: 5px
+
+#sources
+  #top-menu
+    text-align: right
+    text-transform: uppercase
+    text-decoration: underline
+    margin-bottom: -19px
+    margin-rigth: 2px
+    font-size: 12px
+
+    a
+      color: #555
+    a:hover
+      color: #444
+
+  margin-top: 50px
+  #sources-list
+    .star-category
+      margin-top: 30px
+      .stars-label
+        text-align: center
+        font-size: 2em
+        color: #141414
+        text-shadow: 0 1px 0 #101010
+      .sources-grid
+        .removed
+          opacity: 0.2
+
+  #sources-management
+    margin-top: 30px
+    text-align: center
+    #expand-management
+      @include unselectable
+    #sources-import-panel
+      padding-top: 20px
+      .row
+        .import-method
+          background: #252525
+          height: 40px
+          width: 379px
+          margin-left: 20px
+  #empty-sources
+    text-align: center
+
+#import-popup
+  width: 600px
+
+.flexible-streams-importer
+  width: 700px
+  height: 440px
+
+  #streams-list
+    background: #303030
+    width: 661px
+    height: 300px
+    overflow-y: auto
+    overflow-x: hidden
+
+  #source-added-message
+    .source-added-title
+      color: #909090
+      text-transform: uppercase
+      size: 24px
+    .my-stream-link
+      color: #505050
+
+
+#add-individually-note
+  color: #606060
+  font-size: 12px
+
+.close-btn
+  color: #555
+  font-size: 25px
+
+#import-google-reader-popup
+  width: 600px
+  text-align: center
+  #hint
+    color: #808080
+    width: 420px
+    text-align: left
+    margin-left: auto
+    margin-right: auto
+
+#import-by-user
+  width: 360px
+  .close-btn
+    margin-top: -23px
+    margin-right: -20px
+
+  #keyword
+    width: 263px
+    height: 19px
+  #submit
+    line-height: 21px
+    margin-top: 2px
+  #search-result
+    margin-top: 20px
+    .row
+      margin-left: auto
+      margin-right: auto
+      .sources-grid
+        width: 250px
+        margin-left: auto
+        margin-right: auto

@@ -1,0 +1,22 @@
+@mixin unselectable
+  -moz-user-select: -moz-none
+  -khtml-user-select: none
+  -webkit-user-select: none
+  user-select: none
+
+@mixin selectable
+  -moz-user-select: -moz-auto
+  -khtml-user-select: auto
+  -webkit-user-select: auto
+  user-select: auto
+
+@mixin special-character
+  text-rendering: auto
+
+@mixin flashing($second)
+  -webkit-transition: opacity linear $second
+  transition: opacity linear $second
+  -moz-transition: opacity linear $second
+
+@mixin text-shadow
+  text-shadow: 0 1px 0 #000

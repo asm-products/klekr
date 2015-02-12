@@ -1,0 +1,211 @@
+@import '../global/_mixins'
+#top-banner
+  @include unselectable
+  #top-banner-left
+    .source-icon-placeholder
+      margin-right: 5px
+    #option-button
+      margin-top: 7px
+      margin-left: 3px
+      cursor: pointer
+      opacity: 0.5
+    .addthis_toolbox
+      width: 110px
+      opacity: 0.55
+      margin-top: 9px
+      margin-left: 10px
+    #my-stream-subtitle
+      color: #505050
+      font-weight: lighter
+      font-style: italic
+      margin-left: 0px
+      font-size: 12px
+      a
+        color: #505050
+      a:hover
+        color: #707070
+      a.my-source-link
+        color: #593327
+      a.my-source-link:hover
+        color: #904E3F
+  #exhibit-name
+    font-weight: lighter
+    color: #BBB
+    opacity: 0.8
+  #invite-link
+    margin-right: 28px
+    font-weight: lighter
+    opacity: 0.8
+    a
+      color: #707070
+    a:hover
+      color: #505050
+    .question
+      font-weight: nomal
+      color: #909090
+
+#top-banner-welcome
+  .user-name
+    font-weight: lighter
+    #username
+      font-style: italic
+    #user-dropdown
+      @include selectable
+
+#fave-panel
+  height: 29px
+  #faveArea
+    width: 220px
+  #reloading-picture
+    padding-top: 10px
+    margin-left: 10px
+  #login-reminder
+    padding-top: 5px
+    margin-left: 10px
+  #reloading-picture
+    opacity: 0.5
+
+#faveRatingPanel
+  padding-bottom: 15px
+  #awesome
+    margin-bottom: 20px
+    text-transform: uppercase
+  #detail
+    color: #404040
+    width: 380px
+    margin-top: 20px
+    padding-left: 3px
+    font-size: 12px
+    line-height: 150%
+
+  #faveRating
+    margin-top: 25px
+    margin-bottom: 15px
+    margin-left: 100px
+  #related-pictures
+    padding-left: 3px
+    margin-top: 20px
+    margin-bottom: 20px
+    font-size: 14px
+    color: #505050
+    a:hover
+      color: #836335
+    #artist-collection
+      font-size: 12px
+
+  #hint-message
+    min-height: 15px
+    padding-left: 4px
+    font-size: 13px
+    color: #707070
+    font-style: italic
+
+#empty-gallery-message
+  margin-top: 250px
+  #come-back
+    margin-top: 20px
+    color: #999
+
+#bottomLeft
+  @include unselectable
+  text-align: left
+  left: 0px
+  bottom: 10px
+  margin-left: 10px
+  height: 30px
+  width: 351px
+  #auto-play
+    margin-top: 9px
+    font-size: 20px
+    font-family: Arial
+    width: 24px
+    cursor: pointer
+    #play-button
+      position: absolute
+      opacity: 0.5
+    #pause-button
+      @include flashing(1.5s)
+      position: absolute
+
+  .faded
+    opacity: 0.2
+
+#bottomRight
+  text-align: right
+  position: absolute
+  right: 0px
+  width: 250px
+
+.pic_small
+  margin: 10px
+  vertical-align: middle
+  text-align: center
+  float: left
+  width: 244px
+  height: 244px
+  line-height: 244px
+
+#bottom-banner
+  @include unselectable
+  width: 100%
+  text-align: center
+  position: absolute
+  left: 0px
+  font-size: 13px
+
+  .copyrights
+    font-size: 12px
+    color: #555
+  a
+    color: #707070
+  a:hover
+    opacity: 0.5
+  .rss-icon
+    opacity: 0.7
+  .currents-logo
+    margin-bottom: -4px
+    opacity: 0.65
+
+#gridview
+  @include unselectable
+  width: 100%
+
+#rating_filter
+  width: 100px
+  height: 23px
+
+.side-nav
+  @include unselectable
+  display: none
+  width: 50px
+  vertical-align: middle
+  cursor: pointer
+  position: absolute
+  top: 60px
+  &.right
+    right: 0px
+  &.left
+    left: 0px
+  .arrow
+    @include unselectable
+    display: none
+
+  .arrow:hover
+    color: #404040
+
+#slide
+  @include unselectable
+  #pictureArea
+    position: absolute
+    top: 60px
+    left: 0px
+    width: 100%
+    margin-left: auto
+    margin-right: auto
+
+    #imageFrameInner
+      @include unselectable
+      margin-left: auto
+      margin-right: auto
+      #imageCaption
+        text-align: center
